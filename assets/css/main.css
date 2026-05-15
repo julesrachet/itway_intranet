@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.content {
+    line-height: 1.6;
+}
+
+article header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+}
+
+footer {
+    margin-top: auto;
+}

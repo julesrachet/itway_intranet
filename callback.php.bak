@@ -1,0 +1,22 @@
+<?php
+require_once 'includes/auth.php';
+
+$auth = new KeycloakAuth();
+
+if (isset($_GET['code'])) {
+    $tokenData = $auth->exchangeCodeForToken($_GET['code']);
+    
+    if (isset($tokenData['access_token'])) {
+        $userInfo = $auth->getUserInfo($tokenData['access_token']);
+        
+        $_SESSION['access_token'] = $tokenData['access_token'];
+        $_SESSION['user'] = $userInfo;
+        
+        header('Location: index.php');
+        exit();
+    }
+}
+
+header('Location: login.php');
+exit();
+?>
