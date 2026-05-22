@@ -1,0 +1,220 @@
+/* ===== ACCESSIBILITY TOOLBAR ===== */
+#a11y-toolbar {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 6px 0;
+    font-size: 0.82rem;
+    border-bottom: 2px solid #0f3460;
+}
+
+#a11y-toolbar .container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+#a11y-toolbar .a11y-label {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    opacity: 0.7;
+    margin-right: 4px;
+    white-space: nowrap;
+}
+
+.a11y-btn {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+.a11y-btn:hover {
+    background: rgba(255,255,255,0.22);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.a11y-btn.active {
+    background: #e94560;
+    border-color: #e94560;
+    color: #fff;
+    font-weight: 600;
+}
+
+.a11y-separator {
+    width: 1px;
+    height: 18px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 4px;
+}
+
+/* ===== FONT SIZE MODES ===== */
+body.a11y-font-md { font-size: 1.1rem !important; }
+body.a11y-font-lg { font-size: 1.25rem !important; }
+body.a11y-font-xl { font-size: 1.45rem !important; }
+
+body.a11y-font-md .card,
+body.a11y-font-lg .card,
+body.a11y-font-xl .card,
+body.a11y-font-md p,
+body.a11y-font-lg p,
+body.a11y-font-xl p,
+body.a11y-font-md li,
+body.a11y-font-lg li,
+body.a11y-font-xl li {
+    font-size: inherit;
+}
+
+/* ===== DYSLEXIA MODE ===== */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/fonts/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/fonts/OpenDyslexic-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body.a11y-dyslexia,
+body.a11y-dyslexia p,
+body.a11y-dyslexia h1,
+body.a11y-dyslexia h2,
+body.a11y-dyslexia h3,
+body.a11y-dyslexia h4,
+body.a11y-dyslexia h5,
+body.a11y-dyslexia h6,
+body.a11y-dyslexia a,
+body.a11y-dyslexia span,
+body.a11y-dyslexia button,
+body.a11y-dyslexia .btn,
+body.a11y-dyslexia label,
+body.a11y-dyslexia input,
+body.a11y-dyslexia textarea,
+body.a11y-dyslexia .card,
+body.a11y-dyslexia .nav-link,
+body.a11y-dyslexia small,
+body.a11y-dyslexia .navbar-brand {
+    font-family: 'OpenDyslexic', sans-serif !important;
+    letter-spacing: 0.06em;
+    word-spacing: 0.18em;
+    line-height: 1.85 !important;
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+body.a11y-contrast {
+    background-color: #000 !important;
+    color: #ffff00 !important;
+}
+
+body.a11y-contrast .navbar,
+body.a11y-contrast .bg-primary {
+    background-color: #000 !important;
+    border-bottom: 3px solid #ffff00 !important;
+}
+
+body.a11y-contrast .navbar-brand,
+body.a11y-contrast .nav-link,
+body.a11y-contrast .nav-link span {
+    color: #ffff00 !important;
+}
+
+body.a11y-contrast .card {
+    background-color: #000 !important;
+    border: 2px solid #ffff00 !important;
+    box-shadow: none !important;
+    color: #ffff00 !important;
+}
+
+body.a11y-contrast .card:hover {
+    box-shadow: 0 0 0 3px #ffff00 !important;
+}
+
+body.a11y-contrast .card-header {
+    background-color: #111 !important;
+    border-bottom: 1px solid #ffff00 !important;
+}
+
+body.a11y-contrast .text-muted,
+body.a11y-contrast small {
+    color: #ffd700 !important;
+}
+
+body.a11y-contrast a {
+    color: #00ffff !important;
+}
+
+body.a11y-contrast a:hover {
+    color: #fff !important;
+}
+
+body.a11y-contrast .btn-primary,
+body.a11y-contrast .btn-outline-primary {
+    background-color: #ffff00 !important;
+    color: #000 !important;
+    border-color: #ffff00 !important;
+}
+
+body.a11y-contrast .btn-secondary {
+    background-color: #888 !important;
+    color: #000 !important;
+    border-color: #888 !important;
+}
+
+body.a11y-contrast .btn-outline-danger {
+    background-color: #ff4444 !important;
+    color: #000 !important;
+    border-color: #ff4444 !important;
+}
+
+body.a11y-contrast .form-control {
+    background-color: #000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+body.a11y-contrast .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(255,255,0,0.4) !important;
+}
+
+body.a11y-contrast .alert-danger {
+    background-color: #3a0000 !important;
+    color: #ff8888 !important;
+    border-color: #ff4444 !important;
+}
+
+body.a11y-contrast footer,
+body.a11y-contrast .bg-light {
+    background-color: #111 !important;
+    color: #ffff00 !important;
+    border-top: 2px solid #ffff00 !important;
+}
+
+body.a11y-contrast h1,
+body.a11y-contrast h2,
+body.a11y-contrast h3,
+body.a11y-contrast h4,
+body.a11y-contrast h5 {
+    color: #ffffff !important;
+}
+
+body.a11y-contrast article header {
+    border-bottom-color: #ffff00 !important;
+}
+
+body.a11y-contrast #a11y-toolbar {
+    background: #111 !important;
+    border-bottom: 2px solid #ffff00 !important;
+}
