@@ -200,7 +200,7 @@ Retourne un tableau associatif PHP contenant la configuration OIDC du client Key
 - `realm` : `master`
 - `auth-server-url` : `https://sso.itway.fr`
 - `resource` (client_id) : `INTRANET`
-- `credentials.secret` : secret client (en clair dans le dépôt — à externaliser, voir [Points d'attention](#points-dattention-et-améliorations-possibles))
+- `credentials.secret` : secret client (en clair dans le dépôt — à externaliser.
 - `redirect_uri` : `https://intranet.itway.local/callback.php`
 - `logout_uri` : `https://intranet.itway.local/login.php`
 
